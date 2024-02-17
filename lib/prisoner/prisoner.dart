@@ -18,13 +18,13 @@ class _PrisonerState extends State<Prisoner> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple,
-        title: Text("Prisoner"),
+        title: const Text("Prisoner"),
       ),
       body: _getBody(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.local_hospital),
             backgroundColor: Colors.black,
@@ -58,15 +58,15 @@ class _PrisonerState extends State<Prisoner> {
   Widget _getBody(int index) {
     switch (index) {
       case 0:
-        return Rehabilitation();
+        return const Rehabilitation();
       case 1:
-        return MyChats();
+        return const MyChats();
       case 2:
-        return PrisonerProfile();
+        return const PrisonerProfile();
       case 3:
-        return directory();
+        return const directory();
       case 4:
-        return articles();
+        return const articles();
       default:
         return Container(); // Return an empty container for unknown index
     }
@@ -82,7 +82,7 @@ class _PrisonerState extends State<Prisoner> {
 class RehabilitationProgram extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Rehabilitation Program'),
     );
   }
@@ -91,7 +91,7 @@ class RehabilitationProgram extends StatelessWidget {
 class Chats extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Chats'),
     );
   }
@@ -100,7 +100,7 @@ class Chats extends StatelessWidget {
 class LegalDirectory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Legal Directory'),
     );
   }
@@ -109,7 +109,7 @@ class LegalDirectory extends StatelessWidget {
 class LegalArticles extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Legal Articles'),
     );
   }
