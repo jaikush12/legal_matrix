@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:legal_matrix/lawyer/lawyer.dart';
+// import 'package:legal_matrix/lawyer/lawyer.dart';
+import 'package:legal_matrix/login/login_page.dart';
+import 'package:legal_matrix/login/signup%20page.dart';
 import 'package:legal_matrix/prisoner/prisoner.dart';
 //import 'package:legal_matrix/lawyer/lawyer.dart';
 //import 'package:legal_matrix/prisoner/prisoner.dart';
@@ -15,7 +17,7 @@ class _MyRoleState extends State<MyRole> {
   @override
   Widget build(BuildContext context) {
     double fontSize = MediaQuery.of(context).size.height * 0.03;
-    double imageSize = MediaQuery.of(context).size.width * 0.2;
+    // double imageSize = MediaQuery.of(context).size.width * 0.4;
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
@@ -32,42 +34,56 @@ class _MyRoleState extends State<MyRole> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "Legal Matrix",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: fontSize * 2,
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
+                  Padding(
+                    padding: EdgeInsets.only(left: width * 0.01),
+                    child: Text(
+                      "Legal Matrix",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: fontSize * 2,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    height: 10,
+                    thickness: 5,
+                    indent: width * 0.01,
+                    endIndent: width * 0.8,
+                    color: Colors.black,
+                  ),
+                  const SizedBox(height: 10.0),
+                  Padding(
+                    padding: EdgeInsets.only(left: width * 0.01),
+                    child: Text(
+                      "Empowering Justice:",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: fontSize,
+                      ),
                     ),
                   ),
                   const SizedBox(height: 10.0),
-                  Text(
-                    "Empowering Justice:",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: fontSize,
-                    ),
-                  ),
-                  const SizedBox(height: 10.0),
-                  Text(
-                    "Your Bridge to Legal Aid, Resources, and Rehabilitation",
-                    style: TextStyle(
-                      color: Colors.grey[700],
-                      fontSize: fontSize,
+                  Padding(
+                    padding: EdgeInsets.only(left: width * 0.01),
+                    child: Text(
+                      "Your Bridge to Legal Aid, Resources, and Rehabilitation",
+                      style: TextStyle(
+                        color: Colors.grey[700],
+                        fontSize: fontSize,
+                      ),
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(
-                        right: MediaQuery.of(context).size.width * 0.05),
+                    margin: EdgeInsets.only(right: width * 0.05),
                     alignment: Alignment.centerRight,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         SizedBox(
-                          width: imageSize * 0.8,
-                          height: imageSize * 0.8,
+                          height: 220,
+                          width: 220,
                           child: Image.asset('assets/images/illustration.png'),
                         ),
                         const SizedBox(
@@ -116,14 +132,15 @@ class _MyRoleState extends State<MyRole> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Lawyer()),
+                                        builder: (context) =>
+                                            const SIGNUPPAGE()),
                                   );
                                 },
                                 child: Container(
+                                  height: 120,
+                                  width: 120,
                                   decoration:
                                       const BoxDecoration(color: Colors.white),
-                                  width: imageSize * 0.8,
-                                  height: imageSize * 0.8,
                                   child:
                                       Image.asset('assets/images/balancer.png'),
                                 ),
@@ -154,10 +171,10 @@ class _MyRoleState extends State<MyRole> {
                                   );
                                 },
                                 child: Container(
+                                  height: 120,
+                                  width: 120,
                                   decoration:
                                       const BoxDecoration(color: Colors.white),
-                                  width: imageSize * 0.8,
-                                  height: imageSize * 0.8,
                                   child:
                                       Image.asset('assets/images/pisinor.png'),
                                 ),

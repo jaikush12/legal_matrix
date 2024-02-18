@@ -9,7 +9,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: MyHomePage(),
       debugShowCheckedModeBanner: false,
     );
@@ -17,6 +17,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -26,9 +28,9 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 5),
+        const Duration(seconds: 1),
         () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => MyRole())));
+            context, MaterialPageRoute(builder: (context) => const MyRole())));
   }
 
   @override
