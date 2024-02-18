@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PrisonerProfile extends StatelessWidget {
+  const PrisonerProfile({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,23 +12,23 @@ class PrisonerProfile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage(
                     'assets/prisoner_image.jpg'), // Replace with actual image path
               ),
-              SizedBox(width: 10.0),
+              const SizedBox(width: 10.0),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Prisoner Name',
                     style: TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -34,7 +36,7 @@ class PrisonerProfile extends StatelessWidget {
                         onPressed: () {
                           // Handle Cases button press
                         },
-                        child: Row(
+                        child: const Row(
                           children: [
                             Icon(Icons.balance_sharp),
                             Text('Cases'),
@@ -45,7 +47,7 @@ class PrisonerProfile extends StatelessWidget {
                         onPressed: () {
                           // Handle Appointments button press
                         },
-                        child: Row(
+                        child: const Row(
                           children: [
                             Icon(Icons.mail),
                             Text('Appointments'),
@@ -56,7 +58,7 @@ class PrisonerProfile extends StatelessWidget {
                         onPressed: () {
                           // Handle Requests button press
                         },
-                        child: Row(
+                        child: const Row(
                           children: [
                             Icon(Icons.notifications),
                             Text('Requests'),
@@ -69,29 +71,29 @@ class PrisonerProfile extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 20.0), // Add some space between the sections
-          Row(
+          const SizedBox(height: 20.0), // Add some space between the sections
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               // Add widgets for the second row as needed
             ],
           ),
-          SizedBox(height: 20.0), // Add some space between the sections
+          const SizedBox(height: 20.0), // Add some space between the sections
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
                 decoration: BoxDecoration(
                   color: Colors.grey[300],
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(25.0),
                     topRight: Radius.circular(25.0),
                     bottomLeft: Radius.circular(25.0),
                     bottomRight: Radius.circular(25.0),
                   ),
                 ),
-                padding: EdgeInsets.all(10),
-                child: Column(
+                padding: const EdgeInsets.all(10),
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text("Information"),
@@ -105,15 +107,15 @@ class PrisonerProfile extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   color: Colors.grey[300],
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(25.0),
                     topRight: Radius.circular(25.0),
                     bottomLeft: Radius.circular(25.0),
                     bottomRight: Radius.circular(25.0),
                   ),
                 ),
-                padding: EdgeInsets.all(10),
-                child: Column(
+                padding: const EdgeInsets.all(10),
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text("Information"),
@@ -126,15 +128,15 @@ class PrisonerProfile extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 20.0), // Add some space between the sections
-          Row(
+          const SizedBox(height: 20.0), // Add some space between the sections
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               // Add widgets for the fourth row as needed
             ],
           ),
-          SizedBox(height: 20.0), // Add some space between the sections
-          Row(
+          const SizedBox(height: 20.0), // Add some space between the sections
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               // Add widgets for the fifth row as needed

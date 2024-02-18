@@ -10,6 +10,21 @@ class Rehabilitation extends StatefulWidget {
 class _RehabilitationState extends State<Rehabilitation> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    double fontSize = MediaQuery.of(context).size.height * 0.03;
+    // double imageSize = MediaQuery.of(context).size.width * 0.4;
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    return Scaffold(
+      body: Column(
+        children: [
+          Text(
+            "Rehabilitation Program",
+            style: TextStyle(
+              fontSize: fontSize * 2,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
