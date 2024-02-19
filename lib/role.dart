@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:legal_matrix/lawyer/lawyer.dart';
-import 'package:legal_matrix/login/login_page.dart';
-import 'package:legal_matrix/login/signup%20page.dart';
+import 'package:legal_matrix/login/lawyer%20login/login_page.dart';
+import 'package:legal_matrix/login/lawyer%20login/signup%20page.dart';
 import 'package:legal_matrix/prisoner/prisoner.dart';
 //import 'package:legal_matrix/lawyer/lawyer.dart';
 //import 'package:legal_matrix/prisoner/prisoner.dart';
