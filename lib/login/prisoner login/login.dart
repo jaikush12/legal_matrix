@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:legal_matrix/constents/utils.dart';
 import 'package:legal_matrix/login/lawyer%20login/login_page.dart';
+import 'package:legal_matrix/prisoner/prisoner.dart';
 
 class LoginPrisoner extends StatefulWidget {
   const LoginPrisoner({super.key});
@@ -13,9 +15,39 @@ class _LoginPrisonerState extends State<LoginPrisoner> {
   final _emailaddress = TextEditingController();
   final _password = TextEditingController();
   bool rememberMe = false;
+  bool _isLoading = false;
 
   String email = '';
   String password = '';
+  @override
+  void dispose() {
+    super.dispose();
+    _emailaddress.dispose();
+    _password.dispose();
+  }
+
+  void loginUser() async {
+    setState(() {
+      _isLoading = true;
+    });
+    String res = await AuthMethods()
+        .loginUser(email: _emailaddress.text, password: _password.text);
+    if (res == 'success') {
+      Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (context) => Prisoner()),
+          (route) => false);
+
+      setState(() {
+        _isLoading = false;
+      });
+    } else {
+      setState(() {
+        _isLoading = false;
+      });
+      showSnackBar(context, res);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
